@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title text-center>{{Microfono.nombre}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+
+    <ion-text color="primary" text-center>
+        <p class="descripcion fw-700">{{Microfono.descripcion}}</p>
+    </ion-text>
+
+    <div class="posicion" *ngFor="let posicion of Microfono.posiciones">
+        <app-presentacion-posiciones [url]="posicion.urlSonido" [nombreClasificacion]="Microfono.nombreClasificacion" [tituloPosicion]="posicion.Posicion"></app-presentacion-posiciones>
+    </div>
+
+</ion-content>

@@ -1,0 +1,25 @@
+.textoClasificacion {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.textoNombreMicrofono {
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+.boton-microfono {
+    --border-radius: 30px;
+    margin: 0 auto;
+    max-width: 83% !important;
+}
+
+.boton-clasificacion {
+    margin: 0 auto;
+    --border-radius: 12px;
+    max-width: 95% !important;
+}
+
+.list-md {
+    background: none;
+}

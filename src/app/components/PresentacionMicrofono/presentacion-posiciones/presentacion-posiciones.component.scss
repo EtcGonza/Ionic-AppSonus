@@ -1,0 +1,90 @@
+// Template Querys
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+    ion-card-subtitle {
+        color: green !important;
+    }
+    ion-card-title {
+        color: green !important;
+    }
+}
+
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    ion-card-subtitle {
+        color: palevioletred !important;
+    }
+    ion-card-title {
+        color: palevioletred !important;
+    }
+}
+
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    ion-card-subtitle {
+        color: purple !important;
+    }
+    ion-card-title {
+        color: purple !important;
+    }
+}
+
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    ion-card-subtitle {
+        color: red !important;
+    }
+    ion-card-title {
+        color: red !important;
+    }
+}
+
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {
+    ion-card-subtitle {
+        color: orange !important;
+    }
+    ion-card-title {
+        color: orange !important;
+    }
+}
+
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    ion-card-subtitle {
+        color: blue !important;
+    }
+    ion-card-title {
+        color: blue !important;
+    }
+}
