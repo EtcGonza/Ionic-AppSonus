@@ -1,17 +1,26 @@
 <ion-header>
     <ion-toolbar color="primary">
-        <ion-title text-center>{{Microfono.nombre}}</ion-title>
+        <h2 text-center>{{Microfono.nombre}}</h2>
+        <!-- <ion-card-subtitle>{{Microfono.nombreClasificacion}}</ion-card-subtitle> -->
     </ion-toolbar>
 </ion-header>
+
+<!-- <app-titulo-header [Titulo]="Microfono.nombre"></app-titulo-header> -->
 
 <ion-content color="secondary">
 
     <ion-text color="primary" text-center>
-        <p class="descripcion fw-700">{{Microfono.descripcion}}</p>
+        <p class="descripcion">{{Microfono.descripcion}}</p>
     </ion-text>
 
-    <div class="posicion" *ngFor="let posicion of Microfono.posiciones">
-        <app-presentacion-posiciones [url]="posicion.urlSonido" [nombreClasificacion]="Microfono.nombreClasificacion" [tituloPosicion]="posicion.Posicion"></app-presentacion-posiciones>
+    <div class="contenedor-posiciones">
+        <ion-grid>
+            <ion-row class="contenedor-tarjetas ion-align-items-center ion-justify-content-between">
+                <ion-col class="align-items-center align-self-center" size-lg="4" size-md="12" size-sm="12" size-xs="12" *ngFor="let posicion of Microfono.posiciones">
+                    <app-presentacion-posiciones [url]="posicion.urlSonido" [nombreClasificacion]="Microfono.nombreClasificacion" [tituloPosicion]="posicion.Posicion"></app-presentacion-posiciones>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
     </div>
 
 </ion-content>

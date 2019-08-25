@@ -11,7 +11,7 @@ export class ListaMicrofonosPage implements OnInit {
 
   @Input()tipoInstrumento;
 
-  listaMicrofonos: ClasificacionMicrofonos[];
+  listaMicrofonos: any[];
   automaticClose = false;
 
   constructor(private api: ApiService) {

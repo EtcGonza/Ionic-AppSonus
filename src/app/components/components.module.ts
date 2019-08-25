@@ -9,6 +9,7 @@ import { ReproductorComponent } from './PresentacionMicrofono/reproductor/reprod
 import { PipeCloudPipe } from '../pipe/pipe-cloud.pipe';
 import { PresentacionPosicionesComponent } from './PresentacionMicrofono/presentacion-posiciones/presentacion-posiciones.component';
 import { PresentacionMicrofonoComponent } from './PresentacionMicrofono/presentacion-microfono/presentacion-microfono.component';
+import { TituloHeaderComponent } from './titulo-header/titulo-header.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PresentacionMicrofonoComponent } from './PresentacionMicrofono/presenta
     ReproductorComponent,
     PipeCloudPipe,
     PresentacionPosicionesComponent,
-    PresentacionMicrofonoComponent
+    PresentacionMicrofonoComponent,
+    TituloHeaderComponent
   ],
   exports: [
     MenuComponent,
