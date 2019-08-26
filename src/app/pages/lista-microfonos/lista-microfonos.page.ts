@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { ClasificacionMicrofonos } from '../../interfaces/interfaceClasificacionMic';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-lista-microfonos',
@@ -9,16 +10,18 @@ import { ClasificacionMicrofonos } from '../../interfaces/interfaceClasificacion
 })
 export class ListaMicrofonosPage implements OnInit {
 
-  @Input()tipoInstrumento;
-
+  tipoInstrumento: string;
   listaMicrofonos: any[];
   automaticClose = false;
 
-  constructor(private api: ApiService) {
+  constructor(private api: ApiService, private route: ActivatedRoute) {
 
-    if (this.tipoInstrumento === 'Bajos') {
+  this.tipoInstrumento = this.route.snapshot.paramMap.get('tipoInstrumento');
 
-      // console.log('Solicitando Bajos');
+  if (this.tipoInstrumento === 'Bajos') {
+
+      console.log('Solicitando Bajos');
+
       this.api.getMicsBajos()
       .subscribe( (data: any) => {
         this.listaMicrofonos = data;
@@ -27,7 +30,7 @@ export class ListaMicrofonosPage implements OnInit {
 
     } else {
 
-      // console.log('Solicitando Guitarras');
+      console.log('Solicitando Guitarras');
 
       this.api.getMicsGuitarras()
       .subscribe( (data: any) => {
@@ -45,7 +48,7 @@ export class ListaMicrofonosPage implements OnInit {
     this.api.setObjMic(this.listaMicrofonos[index].microfonos[childIndex]);
   }
 
-  toggleSection(index){
+  toggleSection(index) {
     this.listaMicrofonos[index].open = !this.listaMicrofonos[index].open;
 
     if (this.automaticClose && this.listaMicrofonos[index].open) {
@@ -54,7 +57,7 @@ export class ListaMicrofonosPage implements OnInit {
 
   }
 
-  toggleItem(index, childIndex){
+  toggleItem(index, childIndex) {
     this.listaMicrofonos[index].microfonos[childIndex].open = !this.listaMicrofonos[index].microfonos[childIndex].open;
   }
 

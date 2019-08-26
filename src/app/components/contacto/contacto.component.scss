@@ -1,0 +1,49 @@
+.contenedor-encontranos {
+    margin-bottom: 3rem;
+}
+
+ion-thumbnail {
+    // display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+    min-width: 12rem;
+    min-height: 12rem;
+    img {
+        max-width: 12rem;
+        min-width: 12rem;
+    }
+}
+
+p {
+    font-size: 1.4rem;
+    margin: 1rem auto;
+}
+
+.sonus {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.instagram {
+    border-radius: 20px;
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    margin-right: 0;
+}
+
+ion-icon {
+    text-align: center;
+}
+
+.iconos {
+    margin-right: 1.2rem;
+}
+
+ion-col {
+    border: 1px solid white;
+    background-color: #FFC65D !important;
+    margin-bottom: 0.3rem;
+}
+
+.destacar {
+    font-weight: bold;
+}

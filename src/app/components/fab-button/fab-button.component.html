@@ -1,0 +1,14 @@
+<!-- fab placed to the bottom end -->
+<ion-fab slot="fixed" vertical="top" horizontal="end">
+    <ion-fab-button color="primary">
+        <ion-icon name="more"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list [side]="side">
+        <ion-fab-button *ngIf="home" (click)="toHome()" color="primary">
+            <ion-icon name="home"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button *ngIf="back" (click)="toDinamica()" color="primary">
+            <ion-icon name="arrow-round-back"></ion-icon>
+        </ion-fab-button>
+    </ion-fab-list>
+</ion-fab>

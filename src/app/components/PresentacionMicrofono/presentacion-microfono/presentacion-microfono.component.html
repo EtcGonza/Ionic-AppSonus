@@ -5,8 +5,6 @@
     </ion-toolbar>
 </ion-header>
 
-<!-- <app-titulo-header [Titulo]="Microfono.nombre"></app-titulo-header> -->
-
 <ion-content color="secondary">
 
     <ion-text color="primary" text-center>
@@ -22,5 +20,7 @@
             </ion-row>
         </ion-grid>
     </div>
+
+    <app-fab-button [home]="true" [side]="'bottom'" [back]="true" [rutaDinamica]="'lista-microfonos'" [tipoInstrumento]="this.Microfono.tipo"></app-fab-button>
 
 </ion-content>

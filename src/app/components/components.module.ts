@@ -10,6 +10,11 @@ import { PipeCloudPipe } from '../pipe/pipe-cloud.pipe';
 import { PresentacionPosicionesComponent } from './PresentacionMicrofono/presentacion-posiciones/presentacion-posiciones.component';
 import { PresentacionMicrofonoComponent } from './PresentacionMicrofono/presentacion-microfono/presentacion-microfono.component';
 import { TituloHeaderComponent } from './titulo-header/titulo-header.component';
+import { FabButtonComponent } from './fab-button/fab-button.component';
+import { SlidesComponent } from './slides/slides.component';
+import { ContactoComponent } from './contacto/contacto.component';
+import { FooterComponent } from './footer/footer.component';
+import { GaleriaComponent } from './galeria/galeria/galeria.component';
 
 @NgModule({
   declarations: [
@@ -17,17 +22,27 @@ import { TituloHeaderComponent } from './titulo-header/titulo-header.component';
     TarjetaInstrumentoComponent,
     PresentacionTarjetasComponent,
     BotonMicrofonoComponent,
+    SlidesComponent,
     ReproductorComponent,
     PipeCloudPipe,
+    ContactoComponent,
     PresentacionPosicionesComponent,
     PresentacionMicrofonoComponent,
-    TituloHeaderComponent
+    TituloHeaderComponent,
+    FabButtonComponent,
+    FooterComponent,
+    GaleriaComponent
   ],
   exports: [
     MenuComponent,
     PresentacionTarjetasComponent,
     BotonMicrofonoComponent,
-    PresentacionMicrofonoComponent
+    PresentacionMicrofonoComponent,
+    FabButtonComponent,
+    SlidesComponent,
+    ContactoComponent,
+    FooterComponent,
+    GaleriaComponent
   ],
   imports: [
     CommonModule, IonicModule

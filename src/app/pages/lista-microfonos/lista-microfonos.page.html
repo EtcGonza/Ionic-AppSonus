@@ -1,52 +1,30 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-title>listaMicrofonos</ion-title>
+    <ion-toolbar color="primary">
+        <ion-title class="titulos-header" text-center>{{this.tipoInstrumento}}</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content padding color="secondary">
 
-    <ion-list *ngFor="let item of listaMicrofonos; let i = index">
+    <div class="contenedor-botones">
+        <ion-list *ngFor="let item of listaMicrofonos; let i = index">
 
-        <ion-item class="boton-clasificacion" color="primary" button="true" (click)="toggleSection(i)" lines="inset" detail="true" [ngClass]="{'section-active': item.open, 'section': !item.open}">
-            <ion-label class="textoClasificacion" text-center>{{item.nombreClasificacion}}</ion-label>
-        </ion-item>
-
-        <div *ngIf="item.open" class="ion-margin">
-            <ion-list *ngFor="let microfono of item.microfonos; let j = index;">
-                <ion-item text-center color="primary" class="boton-microfono" button="true" lines="none" (click)="toggleItem(i, j)" [ngClass]="{'microfono-active': microfono.open, 'microfono': !microfono.open}">
-                    <ion-label class="textoNombreMicrofono" (click)="guardarMicrofono(i,j)" routerLink="/mostrar-microfono">
-                        <ion-icon name="musical-note" slot="start"></ion-icon>{{microfono.nombre}}</ion-label>
-                </ion-item>
-            </ion-list>
-        </div>
-
-    </ion-list>
-
-</ion-content>
-
-<!-- 
-<ion-list *ngFor="let item of listaMicrofonos; let i = index" class="accordion-list">
-
-    <ion-item tappable (click)="toggleSection(i)" lines="none" detail="false" [ngClass]="{'section-active': item.open, 'section': !item.open}">
-        <ion-label>{{item.nombreClasificacion}}</ion-label>
-        <ion-button>
-            <ion-icon slot="start" name="arrow-forward" *ngIf="!item.open"></ion-icon>
-            <ion-icon slot="start" name="arrow-down" *ngIf="item.open"></ion-icon>{{item.nombreClasificacion}}
-        </ion-button>
-    </ion-item>
-
-    <div *ngIf="item.open">
-        <ion-list *ngFor="let microfono of item.microfonos; let j = index;" class="microfono-list">
-            <ion-item taooabke class="" lines="none" detail="false" (click)="toggleItem(i, j)" [ngClass]="{'microfono-active': microfono.open, 'microfono': !microfono.open}">
-                <ion-label>{{microfono.nombre}}</ion-label>
-                <ion-button color="warning">
-                    <ion-icon slot="start" name="add" *ngIf="!microfono.open"></ion-icon>
-                    <ion-icon slot="start" name="close" *ngIf="microfono.open"></ion-icon>{{microfono.nombre}}
-                </ion-button>
+            <ion-item class="boton-clasificacion" color="primary" button="true" (click)="toggleSection(i)" lines="inset" detail="true" [ngClass]="{'section-active': item.open, 'section': !item.open}">
+                <ion-label class="textoClasificacion" text-center>{{item.nombreClasificacion}}</ion-label>
             </ion-item>
+
+            <div *ngIf="item.open" class="ion-margin">
+                <ion-list *ngFor="let microfono of item.microfonos; let j = index;">
+                    <ion-item text-center color="primary" class="boton-microfono" button="true" lines="none" (click)="toggleItem(i, j)" [ngClass]="{'microfono-active': microfono.open, 'microfono': !microfono.open}">
+                        <ion-label class="textoNombreMicrofono" (click)="guardarMicrofono(i,j)" routerLink="/mostrar-microfono">
+                            <ion-icon name="musical-note" slot="start"></ion-icon>{{microfono.nombre}}</ion-label>
+                    </ion-item>
+                </ion-list>
+            </div>
+
         </ion-list>
     </div>
 
+    <app-fab-button [home]="true" [side]="'start'" [back]="false" [slot]="'fixed'"></app-fab-button>
 
-</ion-list> -->
+</ion-content>
