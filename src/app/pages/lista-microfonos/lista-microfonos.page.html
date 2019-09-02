@@ -1,8 +1,4 @@
-<ion-header>
-    <ion-toolbar color="primary">
-        <ion-title class="titulos-header" text-center>{{this.tipoInstrumento}}</ion-title>
-    </ion-toolbar>
-</ion-header>
+<app-titulo-header class="nombreInstrumento" [Titulo]="this.tipoInstrumento"></app-titulo-header>
 
 <ion-content padding color="secondary">
 
@@ -15,8 +11,8 @@
 
             <div *ngIf="item.open" class="ion-margin">
                 <ion-list *ngFor="let microfono of item.microfonos; let j = index;">
-                    <ion-item text-center color="primary" class="boton-microfono" button="true" lines="none" (click)="toggleItem(i, j)" [ngClass]="{'microfono-active': microfono.open, 'microfono': !microfono.open}">
-                        <ion-label class="textoNombreMicrofono" (click)="guardarMicrofono(i,j)" routerLink="/mostrar-microfono">
+                    <ion-item text-center color="primary" class="boton-microfono" routerLink="/mostrar-microfono" button="true" lines="none" (click)="toggleItem(i, j)" [ngClass]="{'microfono-active': microfono.open, 'microfono': !microfono.open}">
+                        <ion-label class="textoNombreMicrofono" (click)="guardarMicrofono(i,j)">
                             <ion-icon name="musical-note" slot="start"></ion-icon>{{microfono.nombre}}</ion-label>
                     </ion-item>
                 </ion-list>

@@ -1,11 +1,14 @@
-<ion-card color="primary" mode="ios">
+<ion-card color="primary" class="tarjeta" mode="ios">
 
     <ion-card-header>
         <ion-card-title text-center>{{tituloPosicion}}</ion-card-title>
     </ion-card-header>
 
-    <ion-card-content>
+    <ion-card-content class="">
         <app-reproductor [url]="url"></app-reproductor>
+        <ion-text class="listenBrowser" color="secondary">
+            Toca en 'Listen In Browser' para escuchar
+        </ion-text>
     </ion-card-content>
 
 </ion-card>

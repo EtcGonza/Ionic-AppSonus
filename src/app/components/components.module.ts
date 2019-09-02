@@ -4,7 +4,6 @@ import { MenuComponent } from './menu/menu.component';
 import { IonicModule } from '@ionic/angular';
 import { TarjetaInstrumentoComponent } from './tarjeta-instrumento/tarjeta-instrumento.component';
 import { PresentacionTarjetasComponent } from './presentacion-tarjetas/presentacion-tarjetas.component';
-import { BotonMicrofonoComponent } from './boton-microfono/boton-microfono.component';
 import { ReproductorComponent } from './PresentacionMicrofono/reproductor/reproductor.component';
 import { PipeCloudPipe } from '../pipe/pipe-cloud.pipe';
 import { PresentacionPosicionesComponent } from './PresentacionMicrofono/presentacion-posiciones/presentacion-posiciones.component';
@@ -15,13 +14,13 @@ import { SlidesComponent } from './slides/slides.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { FooterComponent } from './footer/footer.component';
 import { GaleriaComponent } from './galeria/galeria/galeria.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     MenuComponent,
     TarjetaInstrumentoComponent,
     PresentacionTarjetasComponent,
-    BotonMicrofonoComponent,
     SlidesComponent,
     ReproductorComponent,
     PipeCloudPipe,
@@ -36,16 +35,16 @@ import { GaleriaComponent } from './galeria/galeria/galeria.component';
   exports: [
     MenuComponent,
     PresentacionTarjetasComponent,
-    BotonMicrofonoComponent,
     PresentacionMicrofonoComponent,
     FabButtonComponent,
     SlidesComponent,
     ContactoComponent,
     FooterComponent,
-    GaleriaComponent
+    GaleriaComponent,
+    TituloHeaderComponent
   ],
   imports: [
-    CommonModule, IonicModule
+    CommonModule, IonicModule, RouterModule
   ]
 })
 export class ComponentsModule { }

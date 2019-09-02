@@ -13,6 +13,11 @@ export class PresentacionMicrofonoComponent implements OnInit {
 
   Microfono: Microfono;
 
+  slideOpts = {
+    slidesPerView: 1.2,
+    freeMode: false
+  };
+
   constructor(private apiService: ApiService, private cloudService: SoundCloudService) { }
 
   ngOnInit() {

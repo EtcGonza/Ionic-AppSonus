@@ -2,14 +2,18 @@ div {
     margin: 1.5rem;
 }
 
-.margin {
-    margin: 0 auto;
+ion-card {
+    border-radius: 32px;
 }
 
 ion-card-title {
     font-size: 3rem;
     font-weight: bold;
     // color: black !important;
+}
+
+.margin {
+    margin: 0 auto;
 }
 
 

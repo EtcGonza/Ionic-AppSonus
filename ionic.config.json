@@ -1,7 +1,7 @@
 {
-  "name": "IonicSonusApp",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
+    "name": "IonicSonusApp",
+    "integrations": {
+        "cordova": {}
+    },
+    "type": "angular"
 }

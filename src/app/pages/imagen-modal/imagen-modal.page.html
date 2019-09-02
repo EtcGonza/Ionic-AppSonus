@@ -1,5 +1,9 @@
 <ion-content color="secondary" padding>
-    <img [src]="imagen.path" alt="">
+
+    <div class="contenedor-imagen">
+        <img [src]="imagen.path" alt="imagen-cliente">
+    </div>
+
     <ion-button class="ion-margin" size="large" expand="full" color="primary" fill="outline" (click)="cerrarModal()">
         Volver
     </ion-button>

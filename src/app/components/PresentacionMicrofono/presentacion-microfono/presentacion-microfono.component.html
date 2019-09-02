@@ -1,7 +1,6 @@
 <ion-header>
     <ion-toolbar color="primary">
         <h2 text-center>{{Microfono.nombre}}</h2>
-        <!-- <ion-card-subtitle>{{Microfono.nombreClasificacion}}</ion-card-subtitle> -->
     </ion-toolbar>
 </ion-header>
 
@@ -14,8 +13,14 @@
     <div class="contenedor-posiciones">
         <ion-grid>
             <ion-row class="contenedor-tarjetas ion-align-items-center ion-justify-content-between">
-                <ion-col class="align-items-center align-self-center" size-lg="4" size-md="12" size-sm="12" size-xs="12" *ngFor="let posicion of Microfono.posiciones">
-                    <app-presentacion-posiciones [url]="posicion.urlSonido" [nombreClasificacion]="Microfono.nombreClasificacion" [tituloPosicion]="posicion.Posicion"></app-presentacion-posiciones>
+                <ion-col class="align-items-center align-self-center" size-lg="4" size-md="12" size-sm="12" size-xs="12">
+
+                    <ion-slides pager="true" [options]="slideOpts">
+                        <ion-slide *ngFor="let posicion of Microfono.posiciones">
+                            <app-presentacion-posiciones [url]="posicion.urlSonido" [nombreClasificacion]="Microfono.nombreClasificacion" [tituloPosicion]="posicion.Posicion"></app-presentacion-posiciones>
+                        </ion-slide>
+                    </ion-slides>
+
                 </ion-col>
             </ion-row>
         </ion-grid>
