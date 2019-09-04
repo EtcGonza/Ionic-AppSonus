@@ -13,6 +13,7 @@ export class ListaMicrofonosPage implements OnInit {
   tipoInstrumento: string;
   listaMicrofonos: any[];
   automaticClose = false;
+  trayendoData = true;
 
   constructor(private api: ApiService, private route: ActivatedRoute) {
 
@@ -26,6 +27,7 @@ export class ListaMicrofonosPage implements OnInit {
       .subscribe( (data: any) => {
         this.listaMicrofonos = data;
         this.listaMicrofonos[0].open = true;
+        this.trayendoData = false;
       });
 
     } else {
@@ -36,6 +38,7 @@ export class ListaMicrofonosPage implements OnInit {
       .subscribe( (data: any) => {
         this.listaMicrofonos = data;
         this.listaMicrofonos[0].open = true;
+        this.trayendoData = false;
       });
     }
 

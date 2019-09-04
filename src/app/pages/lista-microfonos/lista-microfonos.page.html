@@ -2,7 +2,12 @@
 
 <ion-content padding color="secondary">
 
-    <div class="contenedor-botones">
+    <div *ngIf="trayendoData">
+        <ion-progress-bar type="indeterminate" color="primary"></ion-progress-bar>
+    </div>
+
+
+    <div *ngIf="!trayendoData" class="contenedor-botones">
         <ion-list *ngFor="let item of listaMicrofonos; let i = index">
 
             <ion-item class="boton-clasificacion" color="primary" button="true" (click)="toggleSection(i)" lines="inset" detail="true" [ngClass]="{'section-active': item.open, 'section': !item.open}">
@@ -21,6 +26,6 @@
         </ion-list>
     </div>
 
-    <app-fab-button [home]="true" [side]="'start'" [back]="false" [slot]="'fixed'"></app-fab-button>
+    <app-fab-button [home]="true" [side]="'start'" [back]="false" [slot]="'fixed'" class="fab-button"></app-fab-button>
 
 </ion-content>

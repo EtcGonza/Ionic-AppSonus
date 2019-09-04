@@ -23,7 +23,7 @@ export class ApiService {
 
       // FUNCIONALIDADES API//
   getMicsBajos() {
-    return this.getQueryApi(`getBajos`);
+      return this.getQueryApi(`getBajos`);
   }
   getMicsGuitarras() {
     return this.getQueryApi(`getGuitarras`);
